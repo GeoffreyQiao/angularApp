@@ -1,0 +1,5 @@
+<h2 ng-bind="sideBar.sideTitle" class="sidebar-title"></h2>
+<ul class="menu-list">
+  <li class="side-item" ng-repeat="item in sideBar.sideList"><a ui-sref="{{item.href}}"><span
+    ng-bind="item.text"></span></a></li>
+</ul>

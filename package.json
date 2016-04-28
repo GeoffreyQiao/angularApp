@@ -1,0 +1,25 @@
+{
+  "name": "ang-app",
+  "version": "1.0.0",
+  "description": "",
+  "main": "server.js",
+  "scripts": {
+    "start": "node --debug-brk server.js",
+    "supervisor": "supervisor server.js"
+  },
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "body-parser": "^1.15.0",
+    "express": "^4.13.4",
+    "method-override": "^2.3.5",
+    "mongoose": "^4.4.11"
+  },
+  "dependencies": {
+    "body-parser": "^1.15.0",
+    "cookie-parser": "^1.4.1",
+    "eslint": "^2.8.0",
+    "express": "^4.13.4",
+    "mongoose": "^4.4.12"
+  }
+}

@@ -1,0 +1,222 @@
+[
+	{
+		"_id": {
+			"$oid": "56f12f1333ccb3ec324f8246"
+		},
+		"P_barcode": "111111111111111",
+		"P_brand": "娇子",
+		"P_name": "新蓝娇",
+		"P_py": "xlj",
+		"P_mainUnit": "包",
+		"P_unitChange": null,
+		"P_helpUnit": "",
+		"P_price": 4,
+		"P_helpBarcode": "",
+		"P_helpPrice": null,
+		"P_price_main": 5,
+		"P_price_help": null,
+		"P_haveYet": 50,
+		"P_addDate": {
+			"$date": 1458646437277
+		},
+		"__v": 0
+	},
+	{
+		"_id": {
+			"$oid": "56f12f7b33ccb3ec324f8247"
+		},
+		"P_barcode": "222222222222",
+		"P_brand": "红塔山",
+		"P_name": "金塔",
+		"P_py": "jt",
+		"P_mainUnit": "条",
+		"P_unitChange": null,
+		"P_helpUnit": "",
+		"P_price": 88,
+		"P_helpBarcode": "",
+		"P_helpPrice": null,
+		"P_price_main": 90,
+		"P_price_help": null,
+		"P_haveYet": 10,
+		"P_addDate": {
+			"$date": 1458646437277
+		},
+		"__v": 0
+	},
+	{
+		"_id": {
+			"$oid": "56f12f9733ccb3ec324f8248"
+		},
+		"P_barcode": "3333333333333333",
+		"P_brand": "",
+		"P_name": "",
+		"P_py": "",
+		"P_mainUnit": "",
+		"P_unitChange": null,
+		"P_helpUnit": "",
+		"P_price": null,
+		"P_helpBarcode": "",
+		"P_helpPrice": null,
+		"P_price_main": null,
+		"P_price_help": null,
+		"P_haveYet": null,
+		"P_addDate": {
+			"$date": 1458646437277
+		},
+		"__v": 0
+	},
+	{
+		"_id": {
+			"$oid": "56f12f9f33ccb3ec324f8249"
+		},
+		"P_barcode": "44444444444444444",
+		"P_brand": "",
+		"P_name": "",
+		"P_py": "",
+		"P_mainUnit": "",
+		"P_unitChange": null,
+		"P_helpUnit": "",
+		"P_price": null,
+		"P_helpBarcode": "",
+		"P_helpPrice": null,
+		"P_price_main": null,
+		"P_price_help": null,
+		"P_haveYet": null,
+		"P_addDate": {
+			"$date": 1458646437277
+		},
+		"__v": 0
+	},
+	{
+		"_id": {
+			"$oid": "56f12fa833ccb3ec324f824a"
+		},
+		"P_barcode": "5555555555555555",
+		"P_brand": "",
+		"P_name": "",
+		"P_py": "",
+		"P_mainUnit": "",
+		"P_unitChange": null,
+		"P_helpUnit": "",
+		"P_price": null,
+		"P_helpBarcode": "",
+		"P_helpPrice": null,
+		"P_price_main": null,
+		"P_price_help": null,
+		"P_haveYet": null,
+		"P_addDate": {
+			"$date": 1458646437277
+		},
+		"__v": 0
+	},
+	{
+		"_id": {
+			"$oid": "56f12fb033ccb3ec324f824b"
+		},
+		"P_barcode": "6666666666666666666",
+		"P_brand": "",
+		"P_name": "",
+		"P_py": "",
+		"P_mainUnit": "",
+		"P_unitChange": null,
+		"P_helpUnit": "",
+		"P_price": null,
+		"P_helpBarcode": "",
+		"P_helpPrice": null,
+		"P_price_main": null,
+		"P_price_help": null,
+		"P_haveYet": null,
+		"P_addDate": {
+			"$date": 1458646437277
+		},
+		"__v": 0
+	},
+	{
+		"_id": {
+			"$oid": "56f12fb833ccb3ec324f824c"
+		},
+		"P_barcode": "7777777777777777777",
+		"P_brand": "",
+		"P_name": "",
+		"P_py": "",
+		"P_mainUnit": "",
+		"P_unitChange": null,
+		"P_helpUnit": "",
+		"P_price": null,
+		"P_helpBarcode": "",
+		"P_helpPrice": null,
+		"P_price_main": null,
+		"P_price_help": null,
+		"P_haveYet": null,
+		"P_addDate": {
+			"$date": 1458646437277
+		},
+		"__v": 0
+	},
+	{
+		"_id": {
+			"$oid": "56f12fbf33ccb3ec324f824d"
+		},
+		"P_barcode": "8888888888888888888",
+		"P_brand": "",
+		"P_name": "",
+		"P_py": "",
+		"P_mainUnit": "",
+		"P_unitChange": null,
+		"P_helpUnit": "",
+		"P_price": null,
+		"P_helpBarcode": "",
+		"P_helpPrice": null,
+		"P_price_main": null,
+		"P_price_help": null,
+		"P_haveYet": null,
+		"P_addDate": {
+			"$date": 1458646437277
+		},
+		"__v": 0
+	},
+	{
+		"_id": {
+			"$oid": "56f12fc533ccb3ec324f824e"
+		},
+		"P_barcode": "9999999999999999",
+		"P_brand": "",
+		"P_name": "",
+		"P_py": "",
+		"P_mainUnit": "",
+		"P_unitChange": null,
+		"P_helpUnit": "",
+		"P_price": null,
+		"P_helpBarcode": "",
+		"P_helpPrice": null,
+		"P_price_main": null,
+		"P_price_help": null,
+		"P_haveYet": null,
+		"P_addDate": {
+			"$date": 1458646437277
+		},
+		"__v": 0
+	},
+	{
+		"_id": {
+			"$oid": "56f12fcf33ccb3ec324f824f"
+		},
+		"P_barcode": "00000000000000000000",
+		"P_brand": "",
+		"P_name": "",
+		"P_py": "",
+		"P_mainUnit": "",
+		"P_unitChange": null,
+		"P_helpUnit": "",
+		"P_price": null,
+		"P_helpBarcode": "",
+		"P_helpPrice": null,
+		"P_price_main": null,
+		"P_price_help": null,
+		"P_haveYet": null,
+		"P_addDate": {
+			"$date": 1458646437277
+		},
+		"__v": 0
+	}
+]

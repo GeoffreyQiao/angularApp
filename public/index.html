@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="zh-CN" ng-app="app" ng-controller="AppCtrl">
+<head>
+  <script src="./libs/angular/angular.min.js"></script>
+  <script src="./libs/angular-ui-router/release/angular-ui-router.min.js"></script>
+
+  <script src="./javascripts/App.js"></script>
+  <script src="./javascripts/Controllers.js"></script>
+  <script src="./javascripts/Directives.js"></script>
+
+  <link rel="stylesheet" href="./styles/bootstrap.min.css">
+  <link rel="stylesheet" href="./libs/font-awesome/css/font-awesome.min.css">
+  <link rel="stylesheet" href="./styles/app.css">
+
+  <meta name="viewport" content="width=device-width, height=device-height, initial-scale=1">
+  <meta charset="UTF-8">
+  <title ng-bind="title"></title>
+</head>
+<body class="container-fluid">
+<div class="row">
+  <nav class="navbar navbar-inverse">
+    <button class="btn navbar-btn btn-danger col-lg-1" ui-sref="content"><a href="">首页</a></button>
+
+    <button class="btn navbar-btn btn-danger col-lg-1" ui-sref="product"><a href="">商品管理</a>
+    </button>
+
+    <button class="btn navbar-btn btn-danger col-lg-1" ui-sref="order"><a href="">订单管理</a></button>
+  </nav>
+</div>
+
+<div class="row">
+  <div class="col-lg-2">
+    <div class="side-menu for-index">
+      <ul class="menu-list">
+        <li class="side-item" ng-repeat="item in menuList"><a ng-href="{{item.href}}" ng-bind="item.text"></a></li>
+      </ul>
+    </div>
+    <div class="side-menu for-page">
+      <div ui-view="sideBar"></div>
+    </div>
+  </div>
+
+  <div class="col-lg-10">
+    <div ui-view></div>
+  </div>
+
+</div>
+
+</body>
+<script src="./libs/jquery/dist/jquery.min.js"></script>
+<script src="./libs/bootstrap/dist/js/bootstrap.min.js"></script>
+</html>

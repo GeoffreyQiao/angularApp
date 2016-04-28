@@ -1,0 +1,140 @@
+@import "switch-btn.css";
+
+@font-face {
+  font-family: 'FontAwesome';
+  src: url('../libs/font-awesome/fonts/fontawesome-webfont.eot?v=4.6.1');
+  src: url('../libs/font-awesome/fonts/fontawesome-webfont.eot?#iefix&v=4.6.1') format('embedded-opentype'), url('../libs/font-awesome/fonts/fontawesome-webfont.woff2?v=4.6.1') format('woff2'), url('../libs/font-awesome/fonts/fontawesome-webfont.woff?v=4.6.1') format('woff'), url('../libs/font-awesome/fonts/fontawesome-webfont.ttf?v=4.6.1') format('truetype'), url('../libs/font-awesome/fonts/fontawesome-webfont.svg?v=4.6.1#fontawesomeregular') format('svg');
+  font-weight: normal;
+  font-style: normal;
+}
+
+* {
+  border-image-width: 0;
+  border: none;
+  font-family: "Microsoft YaHei", sans-serif, Verdana, FontAwesome;
+  font-size: 16px;
+  text-rendering: auto;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+html {
+  font-family: "Source Code Pro Light", "Lucida Sans Unicode", serif;
+  font-size: 16px;
+}
+
+a:link,
+a:hover,
+a:active,
+a:visited {
+  text-decoration: none;
+}
+
+.container-fluid {
+  color: #dcdcdc;
+  background: #111618;
+  width: 100%;
+}
+
+.navbar {
+  font-size: 1.2rem;
+  font-weight: 500;
+}
+.nav a, .navbar a {
+  font: inherit;
+}
+
+.nav {
+  background: #8c8c8c;
+  font: inherit;
+}
+
+.navbar-btn a {
+  color: #134c5d;
+  font-size: 1.3rem;
+  font-weight: 500;
+}
+
+.navbar .btn-danger {
+  margin-left: 1rem;
+}
+
+.side-menu {
+  border-radius: 1rem;
+  overflow: hidden;
+  margin: 0.5rem auto;
+  /*margin-top: 2rem;*/
+}
+
+.menu-list {
+  padding: 0;
+  margin: 1rem auto;
+}
+
+.menu-list:before {
+  content: '';
+}
+
+*:before,
+*:after {
+  clear: both;
+}
+
+.sidebar-title {
+  text-align: center;
+}
+.side-menu .side-item {
+  display: block;
+  height: 2rem;
+  line-height: 2rem;
+  text-align: center;
+}
+
+.for-sideBarInput {
+  display: inline-block;
+  width: 35%;
+}
+
+.for-sideBarInput + input {
+  display: inline-block;
+  border: none;
+  padding: 0;
+  width: 62%;
+  /*border: 1px solid #FFFFFF;*/
+  border-radius: 0.5rem;
+}
+
+.for-sideBarInput + input:after {
+  content: '';
+}
+
+.product-search {
+  width: 50%;
+}
+
+.list {
+  width: 100%;
+  background-color: #5e5e5e;
+}
+
+.option-default {
+  display: none;
+}
+
+.list > thead {
+  background-color: #3c3c3c;
+}
+.list > thead th {
+  font-size: 1.2rem;
+  font-weight: normal;
+  text-align: center;
+  color: #FFF;
+  line-height: 2rem;
+}
+
+.list > tbody td {
+  text-align: center;
+  color: #dcdcdc;
+  font-size: 1rem;
+  line-height: 1.5rem;
+}
