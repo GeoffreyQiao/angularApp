@@ -5,7 +5,7 @@
   "main": "server.js",
   "scripts": {
     "start": "node --debug-brk server.js",
-    "supervisor": "supervisor server.js"
+    "supervisor": "supervisor --debug server.js"
   },
   "author": "",
   "license": "ISC",

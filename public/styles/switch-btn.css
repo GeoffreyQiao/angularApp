@@ -2,52 +2,9 @@
 Form Reset
 ***********************************************/
 
-fieldset {
-  margin: 0 0 1.3rem 0;
-  padding: 0;
-  text-align: left;
-  border: none;
-  display: block;
-  position: relative;
-  top: 0;
-  left: 0;
-}
-
-label {
-  margin: 0;
-  padding: 0 0 0.4rem;
-  width: 100%;
-  display: block;
-  font-size: 1.1rem;
-  line-height: 1.2rem;
-  /*color: #555;*/
-  font-weight: bold;
-  box-sizing: border-box;
-  -webkit-box-sizing: border-box;
-  -moz-box-sizing: border-box;
-}
-
 input, textarea, select {
-  margin: 0;
-  padding: 0 0.75rem;
-  display: block;
-  border-radius: 0;
-  width: 100%;
-  height: 2.6rem;
-  font-size: 1.2rem;
-  line-height: 1.3rem;
-  font-weight: bold;
-  color: #555;
-  border: 1px solid;
   overflow: hidden;
   position: relative;
-  top: 0;
-  left: 0;
-  outline: 0 none;
-  box-sizing: border-box;
-  -webkit-box-sizing: border-box;
-  -moz-box-sizing: border-box;
-  -webkit-appearance: none;
   transition: all 0.2s cubic-bezier(0.33, 0, 0.2, 1) 0s;
   -moz-transition: all 0.2s cubic-bezier(0.33, 0, 0.2, 1) 0s;
   -webkit-transition: all 0.2s cubic-bezier(0.33, 0, 0.2, 1) 0s;

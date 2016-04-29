@@ -73,7 +73,7 @@ var getProductsList = function(callback)
     }
     callback && callback(products);
   })
-  };
+};
 
 /**
  * 新增商品
@@ -81,6 +81,7 @@ var getProductsList = function(callback)
  * @param productData
  * @param callback
  */
+
 var addProduct = function(productData, callback)
 {
   mongo.ProductModel.create(productData, function(err, product)
@@ -116,10 +117,8 @@ var removeProduct = function(productId, callback)
  */
 var searchProduct = function(productObj, callback)
 {
-
   mongo.ProductModel.find(productObj, function(err, products)
   {
     if(err) return console.log(err);
     callback && callback(products);
-  })
-};
+  })};

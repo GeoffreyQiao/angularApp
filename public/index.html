@@ -27,12 +27,15 @@
     <button class="btn navbar-btn btn-danger col-lg-1" ui-sref="order"><a href="">订单管理</a></button>
   </nav>
 </div>
-
 <div class="row">
   <div class="col-lg-2">
     <div class="side-menu for-index">
       <ul class="menu-list">
-        <li class="side-item" ng-repeat="item in menuList"><a ng-href="{{item.href}}" ng-bind="item.text"></a></li>
+        <li class="side-item" ng-repeat="item in menuList">
+          <a class="item-a" ui-sref="{{item.href}}">
+            <span class="menu-text" ng-bind="item.text"></span>
+          </a>
+        </li>
       </ul>
     </div>
     <div class="side-menu for-page">

@@ -8,7 +8,7 @@
 	"editor.fontFamily": "微软雅黑, Segoe UI",
 
 	// 控制字体大小。
-	"editor.fontSize":14,
+	"editor.fontSize":18,
 
 	// 控制行高。
 	"editor.lineHeight": 0,
@@ -26,7 +26,7 @@
 	"editor.wordSeparators": "`~!@#$%^&*()-=+[{]}\\|;:'\",.<>/?",
 
 	// 一个选项卡等于的空格数。
-	"editor.tabSize": 4,
+	"editor.tabSize": 2,
 
 	// 按 "Tab" 时插入空格。
 	"editor.insertSpaces": true,
@@ -41,7 +41,7 @@
 	"editor.scrollBeyondLastLine": true,
 
 	// 控制在多少个字符后编辑器会自动换到下一行。将其设置为 0 则将打开视区宽度换行 
-	"editor.wrappingColumn": 300,
+	"editor.wrappingColumn": 0,
 
 	// 控制换行的行的缩进。可以是“无”、“相同”或“缩进”。
 	"editor.wrappingIndent": "indent",

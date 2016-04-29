@@ -1,35 +1,40 @@
 <div class="row">
-  <input class="col-lg-6 form-control input-lg product-search" search-bar type="text" ng-model="searchText"
-         placeholder="请输入查询商品条码、商品名称或简写首字母">
-  <!--<button class="col-lg-1 btn btn-lg btn-primary" search-btn find="findProduct">Find</button>-->
+  <input class="col-lg-6 form-control input-lg product-search text-primary project-input" search-bar type="text"
+         ng-model="searchText"
+         placeholder="请输入商品：条码、名称或简写首字母">
 </div>
-<table class="list">
-  <switch-button id="hoo" data="moonSun"></switch-button>
-  <thead>
-  <tr class="row">
-    <th class="col-lg-1">编&nbsp;&nbsp;&nbsp;&nbsp;号</th>
-    <th class="col-lg-2">条&nbsp;&nbsp;&nbsp;&nbsp;码</th>
-    <th class="col-lg-3">&nbsp;&nbsp;商&nbsp;&nbsp;品&nbsp;&nbsp;名&nbsp;&nbsp;称&nbsp;&nbsp;</th>
-    <th class="col-lg-2">品&nbsp;&nbsp;&nbsp;&nbsp;牌</th>
-    <th class="col-lg-1">单&nbsp;&nbsp;&nbsp;&nbsp;位</th>
-    <th class="col-lg-2">售&nbsp;&nbsp;&nbsp;&nbsp;价</th>
-    <th class="col-lg-1">操&nbsp;&nbsp;&nbsp;&nbsp;作</th>
-  </tr>
-  </thead>
-  <tbody products-list ng-show="moonSun">
-  <tr class="row" ng-repeat="item in products | orderBy: 'P_brand': true">
-    <td class="col-lg-1" ng-bind="getIndexNo($index, '# ')"></td>
-    <td class="col-lg-2" ng-bind="item.P_barcode"></td>
-    <td class="col-lg-3" ng-bind="item.P_name"></td>
-    <td class="col-lg-2" ng-bind="item.P_brand"></td>
-    <td class="col-lg-1" ng-bind="item.P_mainUnit"></td>
-    <td class="col-lg-2" ng-bind="item.P_price | currency:'¥&emsp;':1"></td>
-    <td class="col-lg-1">
-      <button class="btn btn-danger" ng-click="deleteProductById(item._id)">
-        <i class="fa fa-close fa-lg"></i>
-      </button>
-    </td>
-  </tr>
-  </tbody>
+<div class="table-box table-responsive">
+  <table class="table list table-hover">
+    <thead>
+    <tr class="row">
+      <th class="col-lg-1">编&nbsp;&nbsp;&nbsp;&nbsp;号</th>
+      <th class="col-lg-2">条&nbsp;&nbsp;&nbsp;&nbsp;码</th>
+      <th class="col-lg-3">&nbsp;&nbsp;商&nbsp;&nbsp;品&nbsp;&nbsp;名&nbsp;&nbsp;称&nbsp;&nbsp;</th>
+      <th class="col-lg-2">品&nbsp;&nbsp;&nbsp;&nbsp;牌</th>
+      <th class="col-lg-1">单&nbsp;&nbsp;&nbsp;&nbsp;位</th>
+      <th class="col-lg-2">售&nbsp;&nbsp;&nbsp;&nbsp;价</th>
+      <th class="col-lg-1">操&nbsp;&nbsp;&nbsp;&nbsp;作</th>
+    </tr>
+    </thead>
+    <tbody products-list>
+    <tr class="row" ng-repeat="item in products | orderBy: 'P_brand': true">
+      <td class="col-lg-1" ng-bind="getIndexNo($index, '# ')"></td>
+      <td class="col-lg-2" ng-bind="item.P_barcode"></td>
+      <td class="col-lg-3 item-name" ng-bind="item.P_name"></td>
+      <td class="col-lg-2" ng-bind="item.P_brand"></td>
+      <td class="col-lg-1" ng-bind="item.P_mainUnit"></td>
+      <td class="col-lg-2" ng-bind="item.P_price | currency:'¥&emsp;':1"></td>
+      <td class="col-lg-1">
+        <button class="btn btn-danger" ng-click="deleteProductById(item._id)">
+          <i class="fa fa-close fa-lg"></i>
+        </button>
+        <button class="btn btn-primary" ng-click="editProductById(item._id)">
+          <i class="fa fa-edit fa-lg"></i>
+        </button>
 
-</table>
+      </td>
+    </tr>
+    </tbody>
+
+  </table>
+</div>

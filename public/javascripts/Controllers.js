@@ -163,6 +163,11 @@ app.controller('AppCtrl', ['$scope',
                                          )
                                      };
 
+                                     $scope.editProductById = function(itemID)
+                                     {
+
+                                     };
+
                                      $scope.findProduct = function()
                                      {
                                        var text       = $scope.searchText;

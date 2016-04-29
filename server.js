@@ -35,11 +35,15 @@ app.use(methodOverride('X-HTTP-Method-Override'));
 //设置public目录为项目静态文件根目录----------------------------------------
 app.use(express.static(__dirname + '/public'));
 
+app.use(function (req, res, next) { console.log('Time: %d', Date.now());
+  console.log(req.path);
+  next(); });
+
+app.set('x-powered-by', false);
 app.use(function(req, res, next)
         {
           res.header('Access-Control-Allow-Origin', 'http://tegou.f3322.org');
           res.header('Access-Control-Allow-Origin', 'http://localhost');
-          res.header('x-powered-by', 'GeoQiao');
           next();
         });
 //routes 路由-------------------------------------------------------------
