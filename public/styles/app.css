@@ -156,19 +156,30 @@ input:-ms-input-placeholder
   margin: 0 16px;
 }
 
-.project-input{
+.input-group-addon{
+  background-color: lightgrey;
+}
+
+.project-input,
+.product-info-view input,
+.product-info-view select{
   background-color: #bfbfbf;
+  font-weight: bold;
   border: none;
-  position: relative;
-  transition: all 1s ease;
+  transition: all 0.4s ease;
   box-shadow: 0 0 rgba(24, 111, 105, 0.6);
 }
 
 .project-input:hover,
-.project-input:focus{
+.project-input:focus,
+.product-info-view input:hover,
+.product-info-view input:focus,
+.product-info-view select:hover,
+.product-info-view select:focus {
   box-shadow: 0 0 5px 7px rgba(24, 111, 105, 0.6);
   background-color: #cccccc;
 }
+
 .form-control::-moz-placeholder {
   color: #333333;
   opacity: 0.5;
@@ -233,3 +244,73 @@ input:-ms-input-placeholder
   display: inline-block;
   width: 35%;
 }
+
+/************         Style start!!!      ***      For views: 'product.add.html'          ************/
+
+.input-group .input-title{
+  width: 40%;
+}
+
+.input-group, .input-group-addon{
+  font-size: 20px;
+}
+
+.form-group .input-group{
+  width:100%;
+}
+
+#P_useUnitHelp>div{
+  display: block;
+  width: 100%;
+  height: 100%;
+}
+
+#P_useUnitHelp .radio-home{
+  position: relative;
+  height: 100%;
+  width: 50%;
+  top: 0;
+  left: 0;
+  overflow: hidden;
+  float: left;
+}
+
+.radio-home .form-control[value="true"]{
+  border-radius: 0;
+}
+input[type="radio"]{
+  margin: 0;
+}
+
+.radio-switch{
+  position: absolute;
+  display: inline-block;
+  height: 100%;
+  width: 100%;
+  top:0;
+  left:0;
+  z-index: 9999;
+  opacity: 0;
+}
+.radio-switch + button{
+  font-weight: normal;
+  border: none;
+  border-radius: 0;
+  box-shadow: inset 0 0 #28a1c5;
+}
+
+.radio-switch:checked + button,
+.radio-switch:hover + button{
+  font-weight: bold;
+  -webkit-box-shadow: inset 0 0 2rem #0891a5;
+  -moz-box-shadow: inset 0 0 2rem #0891a5;
+  box-shadow: inset 0 0 2rem #0891a5;
+}
+
+#P_useUnitHelp .radio-home input,
+#P_useUnitHelp .radio-home .btn{
+  width: 100%;
+  height: 100%;
+}
+
+/************         Style end!!!      ***      For views: 'product.add.html'          ************/

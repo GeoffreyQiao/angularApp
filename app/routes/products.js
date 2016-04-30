@@ -57,63 +57,97 @@ router.get('/search/:key/:value', function(req, res)
 module.exports = router;
 
 /**
- * @description 获取数据库中的商品信息
- * @param callback
+ * (获取商品列表) 
+ * @param callback (处理数据库操作返回结果)
  */
 var getProductsList = function(callback)
   {
-  /**
-   * @description 获取所有商品的数量,并执行callback
-   */
-  mongo.ProductModel.find({}, function(err, products, next)
-  {
-    if(err)
+    mongo.ProductModel.find({},
+    /**
+     * (获取数据库中的商品信息)
+     * 
+     * @param err (错误信息)
+     * @param products (商品结果信息)
+     * @param next (数据处理中间件)
+     */
+    function(err, products, next)
     {
-      console.log(err);
-    }
-    callback && callback(products);
-  })
-};
+      if(err)
+      {
+        console.log(err);
+      }
+      callback && callback(products);
+    })
+  };
 
 /**
- * 新增商品
- * TODO 需要完善验证功能
- * @param productData
- * @param callback
+ * (新增商品)
+ * 
+ * @TODO 需要完善验证功能
+ * @param productData (商品信息数据)
+ * @param callback (返回请求结果)
  */
-
 var addProduct = function(productData, callback)
 {
-  mongo.ProductModel.create(productData, function(err, product)
+  mongo.ProductModel.create(productData,
+  
+/**
+ * (接收数据库返回结果)
+ * 
+ * @param err (错误信息)
+ * @param product (数据库处理结果)
+ * @returns (结束)
+ */
+  function(err, product)
   {
     if(err) return console.log(err);
     if(product)
     {
       callback(true);
+      return;
     }
     db.close();
+    return;
   });
 };
 
 /**
- * 删除指定ID的商品项目
- * @param productId
- * @param callback
+ * (删除指定ID的商品项目)
+ * 
+ * @param productId (商品ID)
+ * @param callback (处理操作结果)
  */
 var removeProduct = function(productId, callback)
 {
-  mongo.ProductModel.remove({_id : productId}, function(err)
+  mongo.ProductModel.remove({_id : productId},
+  
+/**
+ * (处理数据库新增商品返回结果)
+ * 
+ * @param err (错误信息)
+ * @returns (description)
+ */
+  function(err)
   {
     if(err) return console.log(err);
     callback('success');
     db.close();
-  })
-};
+    return;
+  })};
+
 
 /**
- * 按照不同条件搜索商品
- * @param productObj
- * @param callback
+ * (按照不同条件搜索商品)
+ * 
+ * @param {Object} productObj (商品搜索条件)
+ * @param callback (处理操作结果)
+ */
+/**
+ * (description)
+ * 
+ * @param err (description)
+ * @param products (description)
+ * @returns (description)
  */
 var searchProduct = function(productObj, callback)
 {

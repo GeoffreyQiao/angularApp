@@ -4,10 +4,10 @@
 
 
 //模块 modules-----------------------------------------------------------
-var express        = require('express');
-var app            = express();
-var bodyParser     = require('body-parser');
-var cookieParser   = require('cookie-parser');
+var express = require('express');
+var app = express();
+var bodyParser = require('body-parser');
+var cookieParser = require('cookie-parser');
 var methodOverride = require('method-override');
 
 //配置文件 config files----------------------------------------------------
@@ -19,15 +19,15 @@ var port = process.env.PORT || 80;
 //解析application/json数据 parse application/json data---------------------
 app.use(bodyParser.json());
 
-app.use(bodyParser.urlencoded({extended : false}));
+app.use(bodyParser.urlencoded({ extended: false }));
 
 app.use(cookieParser());
 
 //解析application/vnd.api+json 为 json格式----------------------------------
-app.use(bodyParser.json({type : 'application/vnd.api+json'}));
+app.use(bodyParser.json({ type: 'application/vnd.api+json' }));
 
 //解析application/x-www-form-urlencoded-----------------------------------
-app.use(bodyParser.urlencoded({extended : false}));
+app.use(bodyParser.urlencoded({ extended: false }));
 
 //重写header中的require请求 X-HTTP-Method-Override, 比如: DELETE/PUT---------
 app.use(methodOverride('X-HTTP-Method-Override'));
@@ -35,17 +35,18 @@ app.use(methodOverride('X-HTTP-Method-Override'));
 //设置public目录为项目静态文件根目录----------------------------------------
 app.use(express.static(__dirname + '/public'));
 
-app.use(function (req, res, next) { console.log('Time: %d', Date.now());
+app.use(function (req, res, next) {
+  console.log('Time: %d', Date.now());
   console.log(req.path);
-  next(); });
+  next();
+});
 
 app.set('x-powered-by', false);
-app.use(function(req, res, next)
-        {
-          res.header('Access-Control-Allow-Origin', 'http://tegou.f3322.org');
-          res.header('Access-Control-Allow-Origin', 'http://localhost');
-          next();
-        });
+app.use(function (req, res, next) {
+  res.header('Access-Control-Allow-Origin', 'http://tegou.f3322.org');
+  res.header('Access-Control-Allow-Origin', 'http://localhost');
+  next();
+});
 //routes 路由-------------------------------------------------------------
 require('./app/routes')(app);
 

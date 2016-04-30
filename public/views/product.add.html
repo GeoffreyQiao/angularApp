@@ -1,170 +1,206 @@
-<p ng-bind="pageName"></p>
-<form id="edit-product" class="product-info product-info-view">
-  <div class="row">
-    <div class="col-lg-4">
-      <div class="input-group input-group-lg">
-        <span class="input-group-addon">&nbsp;条&nbsp;形&nbsp;码&nbsp;</span>
-        <input name="P_barcode" type="text" placeholder="条形码" class="form-control"/>
-      </div>
-    </div>
+<div class="container-fluid">
+  <form id="product-add" class="product-info product-add product-info-view">
 
-    <div class="col-lg-4">
-      <div class="input-group input-group-lg">
-        <span class="input-group-addon">&nbsp;货&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;号&nbsp;</span>
-        <input name="P_NO" type="text" class="form-control"/>
-      </div>
-    </div>
+    <!--row[0] start-->
+    <div class="row">
+      <div class="col-lg-1"></div>
 
-    <div class="col-lg-4">
-      <div class="input-group input-group-lg">
-        <span class="input-group-addon">&nbsp;品&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;牌&nbsp;</span>
-        <input name="P_brand" type="text" class="form-control"/>
-      </div>
-    </div>
-  </div>
-
-  <div class="row">
-    <div class="col-lg-8">
-      <div class="input-group input-group-lg">
-        <span class="input-group-addon">商品名称</span>
-        <input name="P_name" type="text" class="form-control"/>
-      </div>
-    </div>
-
-    <div class="col-lg-4">
-      <div class="input-group input-group-lg">
-        <span class="input-group-addon">快捷简码</span>
-        <input name="P_py" type="text" class="form-control"/>
-      </div>
-    </div>
-  </div>
-  <hr/>
-
-  <div class="row">
-    <div class="col-lg-3">
-      <div class="input-group input-group-lg">
-        <span class="input-group-addon">计价单位</span>
-        <input name="P_mainUnit" type="text" class="form-control"/>
-      </div>
-    </div>
-
-    <div class="col-lg-4">
-      <div class="input-group input-group-lg">
-        <span class="input-group-addon">是否启用辅助单位</span>
-        <switch-button id="isUseHelpUnit" data="isUseHelpUnit"></switch-button>
-      </div>
-    </div>
-
-
-    <div class="col-lg-3">
-      <div class="input-group input-group-lg">
-        <span class="input-group-addon">&nbsp;换&nbsp;&nbsp;&nbsp;算&nbsp;</span>
-        <input name="P_unitChange" type="text" class="form-control"/>
-      </div>
-    </div>
-
-    <div class="col-lg-2">
-      <div class="input-group input-group-lg">
-        <span class="input-group-addon">辅助单位</span>
-        <input name="P_helpUnit" type="text" class="form-control"/>
-      </div>
-    </div>
-  </div>
-
-  <div class="row">
-    <div class="col-lg-3">
-      <div class="input-group input-group-lg">
-        <span class="input-group-addon">&nbsp;进&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;价&nbsp;</span>
-        <input name="P_price" type="number" class="form-control"/>
-      </div>
-    </div>
-
-    <div class="col-lg-4">
-      <div class="input-group input-group-lg">
-        <span class="input-group-addon">是否启用辅助条码</span>
-        <div role="group" class="btn-group btn-group-lg">
-          <button type="button" class="btn btn-primary btn-lg">
-            <a id="helpUnits-true" href="#">&nbsp;&nbsp;&nbsp;启&nbsp;&nbsp;用&nbsp;&nbsp;</a>
-          </button>
-          <button type="button" class="btn btn-danger btn-lg">
-            <a id="helpUnits-false" href="#">&nbsp;&nbsp;停&nbsp;&nbsp;用&nbsp;&nbsp;&nbsp;</a>
-          </button>
+      <!--input:商品名称 start-->
+      <div class="form-group form-group-lg col-lg-4">
+        <label for="P_name" class="sr-only">商品名称</label>
+        <div class="input-group">
+          <label for="P_name" class="input-group-addon input-title">商 品 名 称</label>
+          <input type="text" class="form-control" name="P_name" id="P_name">
         </div>
       </div>
-    </div>
+      <!--input:商品名称 end-->
 
-    <div class="col-lg-3">
-      <div class="input-group input-group-lg">
-        <span class="input-group-addon">&nbsp;条&nbsp;&nbsp;&nbsp;码&nbsp;</span>
-        <input name="P_helpBarcode" type="text" class="form-control"/>
+      <!--input:条形码 start-->
+      <div class="form-group form-group-lg col-lg-4">
+        <label for="P_barCode" class="sr-only">商品条码</label>
+        <div class="input-group">
+          <label for="P_barCode" class="input-group-addon input-title">条 形 码</label>
+          <input type="text" class="form-control" name="P_barCode" id="P_barCode">
+        </div>
       </div>
-    </div>
+      <!--input:条形码 end-->
 
-    <div class="col-lg-2">
-      <div class="input-group input-group-lg"><span class="input-group-addon">辅助进价</span>
-        <input name="P_helpPrice" type="text" class="form-control"/>
+      <!--input:速查简写 start-->
+      <div class="form-group form-group-lg col-lg-2">
+        <label for="P_shortName" class="sr-only">速查缩写</label>
+        <div class="input-group">
+          <label for="P_shortName" class="input-group-addon input-title">速 查 缩 写</label>
+          <input type="text" class="form-control" name="P_shortName" id="P_shortName">
+        </div>
       </div>
-    </div>
-  </div>
-  <hr/>
+      <!--input:速查简写 end-->
 
-  <div class="row">
-    <div class="col-lg-6">
-      <div class="input-group input-group-lg"><span
-        class="input-group-addon">&nbsp;售&nbsp;&nbsp;&nbsp;价&nbsp;</span>
-        <input name="P_price_main" type="text" class="form-control"/>
-        <span class="input-group-addon">元</span>
+      <div class="col-lg-1"></div>
+    </div>
+    <!--row[0] end-->
+
+    <!--row[1] start-->
+    <div class="row">
+      <div class="col-lg-1"></div>
+
+      <!--input:商品品牌 start-->
+      <div class="form-group form-group-lg col-lg-4">
+        <label for="P_brand" class="sr-only">品牌</label>
+        <div class="input-group">
+          <label for="P_brand" class="input-group-addon input-title">品 牌</label>
+          <input type="text" class="form-control" name="P_brand" id="P_brand">
+        </div>
       </div>
-    </div>
+      <!--input:商品品牌 end-->
 
-    <div class="col-lg-6">
-      <div class="input-group input-group-lg">
-        <span class="input-group-addon">辅助单位售价</span>
-        <input name="P_price_help" type="text" class="form-control"/>
-        <span class="input-group-addon">元</span>
+      <!--input:商品规格 start-->
+      <div class="form-group form-group-lg col-lg-4">
+        <label for="P_spec" class="sr-only">商品规格</label>
+        <div class="input-group">
+          <label for="P_spec" class="input-group-addon input-title">规 格</label>
+          <input type="text" class="form-control" name="P_spec" id="P_spec">
+        </div>
       </div>
-    </div>
-  </div>
+      <!--input:商品规格 end-->
 
-  <hr/>
-
-  <div class="row">
-
-    <div class="col-lg-6">
-      <div class="input-group input-group-lg">
-        <span class="input-group-addon">&nbsp;库&nbsp;&nbsp;&nbsp;存&nbsp;</span>
-        <input name="P_haveYet" type="number" class="form-control"/>
+      <!--select:分类 start-->
+      <div class="form-group form-group-lg col-lg-2">
+        <label for="P_category" class="sr-only">商品类型</label>
+        <div class="input-group">
+          <label for="P_category" class="input-group-addon input-title">商 品 类 型</label>
+          <select class="form-control" name="P_category" id="P_category" placeholder="请选择...">
+            <option hidden class="select-default">"默认值"</option>
+            <option value="1">aa</option>
+          </select>
+        </div>
       </div>
-    </div>
+      <!--input:分类 end-->
 
-    <div class="col-lg-6">
-      <div role="group" aria-label="..." class="btn-group btn-group-lg btn-toolbar">
-        <button class="btn btn-lg btn-primary">供应商</button>
-        <button class="btn btn-lg btn-primary">大客户</button>
-        <button class="btn btn-lg btn-primary">报&nbsp;&nbsp;&nbsp;&nbsp;表</button>
+      <div class="col-lg-1"></div>
+    </div>
+    <!--row[1] end-->
+
+    <!--row[2] start-->
+    <div class="row">
+      <div class="col-lg-1"></div>
+
+      <!--input:计价单位 start-->
+      <div class="form-group form-group-lg col-lg-2">
+        <label for="P_unitMain" class="sr-only">计价单位</label>
+        <div class="input-group">
+          <label for="P_unitMain" class="input-group-addon input-title">计 价 单 位</label>
+          <input type="text" class="form-control" name="P_unitMain" id="P_unitMain">
+        </div>
       </div>
+      <!--input:计价单位 end-->
+
+      <!--input:辅助单位开关 start-->
+      <div class="form-group form-group-lg col-lg-2">
+        <label for="P_useUnitHelp" class="sr-only">辅助单位开关</label>
+        <div class="input-group">
+          <label for="P_useUnitHelp" class="input-group-addon input-title">辅单位开关</label>
+
+          <div id="P_useUnitHelp">
+            <div class="input-group-btn">
+              <div class="radio-home">
+                <input type="radio" class="radio-switch" name="radio-switch">
+                <button class="input-group-btn btn-info form-control" type="button" name="P_useUnitHelp" value="true">启用</button>
+              </div>
+              <div class="radio-home">
+                <input type="radio" class="radio-switch" name="radio-switch">
+                <button class="input-group-btn btn-info form-control" type="button" name="P_useUnitHelp" value="false">禁用</button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!--input:辅助单位开关 end-->
+
+      <!--input:初始数量 start-->
+      <div class="form-group form-group-lg col-lg-2">
+        <label for="P_quantityAtStart" class="sr-only">初始数量</label>
+        <div class="input-group">
+          <label for="P_quantityAtStart" class="input-group-addon input-title">初 始 数 量</label>
+          <input type="number" class="form-control" name="P_quantityAtStart" id="P_quantityAtStart">
+        </div>
+      </div>
+      <!--input:初始数量 end-->
+
+      <!--input:成本价 start-->
+      <div class="form-group form-group-lg col-lg-2">
+        <label for="P_costPrice" class="sr-only">成本单价</label>
+        <div class="input-group">
+          <label for="P_costPrice" class="input-group-addon input-title">成 本 单 价</label>
+          <input type="text" class="form-control" name="P_costPrice" id="P_costPrice">
+          <label for="P_costPrice" class="input-group-addon">元</label>
+        </div>
+      </div>
+      <!--input:成本价 end-->
+
+      <!--input:销售单价 start-->
+      <div class="form-group form-group-lg col-lg-2">
+        <label for="P_sellingPrice" class="sr-only">销售单价</label>
+        <div class="input-group">
+          <label for="P_sellingPrice" class="input-group-addon input-title">销 售 单 价</label>
+          <input type="text" class="form-control" name="P_sellingPrice" id="P_sellingPrice">
+          <label for="P_sellingPrice" class="input-group-addon">元</label>
+        </div>
+      </div>
+      <!--input:销售单价 end-->
+
+      <div class="col-lg-1"></div>
     </div>
-  </div>
+    <!--row[2] end-->
 
-  <div class="row">
-    <!--    <div class="switch" data-on-label="<i class='fa fa-check'></i>" data-off-label="<i class='fa fa-times'></i>">
-    <input type="checkbox" checked/>
-    </div>-->
-  </div>
-  <div class="row">
+    <!--row[3] start-->
+    <div class="row">
+      <div class="col-lg-1"></div>
 
-    <div class="col-lg-3">
+      <!--input:辅助单位 start-->
+      <div class="form-group form-group-lg col-lg-2">
+        <label for="P_unitHelp" class="sr-only">辅助单位</label>
+        <div class="input-group">
+          <label for="P_unitHelp" class="input-group-addon input-title">辅 单 位</label>
+          <input type="text" class="form-control" name="P_unitHelp" id="P_unitHelp">
+        </div>
+      </div>
+      <!--input:辅助单位 end-->
+
+      <!--input:单位比例 start-->
+      <div class="form-group form-group-lg col-lg-2">
+        <label for="P_timesForMainUnit" class="sr-only">单位比例</label>
+        <div class="input-group">
+          <label for="P_timesForMainUnit" class="input-group-addon input-title">1 主单位换</label>
+          <input type="number" class="form-control" name="P_timesForMainUnit" id="P_timesForMainUnit">
+          <label for="P_timesForMainUnit"class="input-group-addon">辅单位</label>
+        </div>
+      </div>
+      <!--input:单位比例 end-->
+
+      <!--input:辅单位条形码 start-->
+      <div class="form-group form-group-lg col-lg-4">
+        <label for="P_unitHelp_barCode" class="sr-only">辅单位条码</label>
+        <div class="input-group">
+          <label for="P_unitHelp_barCode" class="input-group-addon input-title">辅 单 位 条 码</label>
+          <input type="text" class="form-control" name="P_unitHelp_barCode" id="P_unitHelp_barCode">
+        </div>
+      </div>
+      <!--input:辅单位条形码 end-->
+
+      <!--input:辅单位售价 start-->
+      <div class="form-group form-group-lg col-lg-2">
+        <label for="P_unitHelp_price" class="sr-only">辅单位售价</label>
+        <div class="input-group">
+          <label for="P_unitHelp_price" class="input-group-addon input-title">辅单位售价</label>
+          <input type="text" class="form-control" name="P_unitHelp_price" id="P_unitHelp_price">
+          <label for="P_unitHelp_price" class="input-group-addon">元</label>
+        </div>
+      </div>
+      <!--input:辅单位售价 end-->
+
+      <div class="col-lg-1"></div>
     </div>
+    <!--row[3] end-->
 
-    <div class="col-lg-3">
-      <button id="formSubmit" class="form-control btn btn-success formbtn">
-        &nbsp;提&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;交&nbsp;</button>
-    </div>
-
-    <div class="col-lg-3">
-      <button id="formQuit" class="form-control btn btn-success formbtn">
-        &nbsp;退&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;出&nbsp;</button>
-    </div>
-
-  </div>
-</form>
+  </form>
+</div>
