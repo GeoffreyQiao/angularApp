@@ -96,19 +96,19 @@
 
       <!--input:辅助单位开关 start-->
       <div class="form-group form-group-lg col-lg-2">
-        <label for="P_useUnitHelp" class="sr-only">辅助单位开关</label>
+        <label for="P_isUseHelpUnit" class="sr-only">辅助单位开关</label>
         <div class="input-group">
-          <label for="P_useUnitHelp" class="input-group-addon input-title">辅单位开关</label>
+          <label for="P_isUseHelpUnit" class="input-group-addon input-title">辅单位开关</label>
 
-          <div id="P_useUnitHelp">
+          <div id="P_isUseHelpUnit">
             <div class="input-group-btn">
               <div class="radio-home">
-                <input type="radio" class="radio-switch" name="radio-switch">
-                <button class="input-group-btn btn-info form-control" type="button" name="P_useUnitHelp" value="true">启用</button>
+                <input type="radio" class="radio-switch" ng-model="formData.isUseHelpUnit" name="P_isUseHelpUnit" ng-value="true"><!--ng-model="productInfo.isUseHelpUnit" -->
+                <button class="input-group-btn btn-info form-control" type="button" value="true">启用</button>
               </div>
               <div class="radio-home">
-                <input type="radio" class="radio-switch" name="radio-switch">
-                <button class="input-group-btn btn-info form-control" type="button" name="P_useUnitHelp" value="false">禁用</button>
+                <input type="radio" class="radio-switch" ng-model="formData.isUseHelpUnit" name="P_isUseHelpUnit" ng-value="false">
+                <button class="input-group-btn btn-info form-control" type="button" value="false">禁用</button>
               </div>
             </div>
           </div>
@@ -160,7 +160,7 @@
       <div class="form-group form-group-lg col-lg-2">
         <label for="P_unitHelp" class="sr-only">辅助单位</label>
         <div class="input-group">
-          <label for="P_unitHelp" class="input-group-addon input-title">辅 单 位</label>
+          <label for="P_unitHelp" class="input-group-addon input-title">辅 助 单 位</label>
           <input type="text" class="form-control" name="P_unitHelp" id="P_unitHelp">
         </div>
       </div>

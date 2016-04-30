@@ -1,3 +1,4 @@
+/// <reference path="typings/node/node.d.ts"/>
 /**
  * Created by Geo on 2016/4/4.
  */

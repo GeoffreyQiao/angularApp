@@ -219,6 +219,8 @@ app.controller('AppCtrl', ['$scope',
    .controller('AddProductCtrl', ['$scope',
                                   function($scope)
                                   {
-                                    $scope.pageName = 'Add Product';
+                                    $scope.formData = {
+                                      isUseHelpUnit: true
+                                    };
                                   }
    ]);
