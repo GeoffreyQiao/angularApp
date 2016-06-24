@@ -1,0 +1,30 @@
+.navbar-default .navbar-brand, .navbar-default .navbar-nav > li > a{
+  color: #FFF;
+  line-height:  40px;
+}
+
+ .navbar-default .navbar-nav > li > a{
+   font-size: 2rem;
+ }
+ 
+ .navbar-default{
+   background-color: #1a8d8d;
+ }
+ 
+ .navbar-default .navbar-nav > .active > a{
+   background-color: #2cb3a9;
+   color: #383838;
+ }
+ 
+ .navbar{
+   min-height: 70px;
+   border: 0;
+ }
+ 
+ .page-main{
+   display: block;
+   background-image: url('../images/page-bg.jpg');
+   background-size: cover;
+   width: 100%;
+   height: 800px; 
+ }

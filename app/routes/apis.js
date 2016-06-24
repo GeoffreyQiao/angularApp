@@ -26,5 +26,4 @@ router.get('/product', function(req, res)
   res.send('["apple", "茄子"]');
 });
 
-
 module.exports = router;

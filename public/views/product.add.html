@@ -1,6 +1,5 @@
-<div class="container-fluid">
-  <form id="product-add" class="product-info product-add product-info-view">
-
+<div class="container-fluid" ng-controller="AddProductCtrl">
+  <form id="product-add" name="productAdd" class="product-info product-add product-info-view" ng-submit="add(item)" novalidate>
     <!--row[0] start-->
     <div class="row">
       <div class="col-lg-1"></div>
@@ -10,7 +9,7 @@
         <label for="P_name" class="sr-only">商品名称</label>
         <div class="input-group">
           <label for="P_name" class="input-group-addon input-title">商 品 名 称</label>
-          <input type="text" class="form-control" name="P_name" id="P_name">
+          <input type="text" class="form-control" name="P_name" id="P_name" ng-model="item.P_name">
         </div>
       </div>
       <!--input:商品名称 end-->
@@ -20,7 +19,7 @@
         <label for="P_barCode" class="sr-only">商品条码</label>
         <div class="input-group">
           <label for="P_barCode" class="input-group-addon input-title">条 形 码</label>
-          <input type="text" class="form-control" name="P_barCode" id="P_barCode">
+          <input type="text" class="form-control" name="P_barCode" id="P_barCode" ng-model="item.P_barCode" ng-minlength="13" ng-maxlength="13">
         </div>
       </div>
       <!--input:条形码 end-->
@@ -30,7 +29,7 @@
         <label for="P_shortName" class="sr-only">速查缩写</label>
         <div class="input-group">
           <label for="P_shortName" class="input-group-addon input-title">速 查 缩 写</label>
-          <input type="text" class="form-control" name="P_shortName" id="P_shortName">
+          <input type="text" class="form-control" name="P_shortName" id="P_shortName" ng-model="item.P_shortName">
         </div>
       </div>
       <!--input:速查简写 end-->
@@ -48,7 +47,7 @@
         <label for="P_brand" class="sr-only">品牌</label>
         <div class="input-group">
           <label for="P_brand" class="input-group-addon input-title">品 牌</label>
-          <input type="text" class="form-control" name="P_brand" id="P_brand">
+          <input type="text" class="form-control" name="P_brand" id="P_brand"  ng-model="item.P_brand">
         </div>
       </div>
       <!--input:商品品牌 end-->
@@ -58,7 +57,7 @@
         <label for="P_spec" class="sr-only">商品规格</label>
         <div class="input-group">
           <label for="P_spec" class="input-group-addon input-title">规 格</label>
-          <input type="text" class="form-control" name="P_spec" id="P_spec">
+          <input type="text" class="form-control" name="P_spec" id="P_spec" ng-model="item.P_spec">
         </div>
       </div>
       <!--input:商品规格 end-->
@@ -68,7 +67,7 @@
         <label for="P_category" class="sr-only">商品类型</label>
         <div class="input-group">
           <label for="P_category" class="input-group-addon input-title">商 品 类 型</label>
-          <select class="form-control" name="P_category" id="P_category" placeholder="请选择...">
+          <select class="form-control" name="P_category" id="P_category" placeholder="请选择..." ng-model="item.P_category">
             <option hidden class="select-default">"默认值"</option>
             <option value="1">aa</option>
           </select>
@@ -89,7 +88,7 @@
         <label for="P_unitMain" class="sr-only">计价单位</label>
         <div class="input-group">
           <label for="P_unitMain" class="input-group-addon input-title">计 价 单 位</label>
-          <input type="text" class="form-control" name="P_unitMain" id="P_unitMain">
+          <input type="text" class="form-control" name="P_unitMain" id="P_unitMain" ng-model="item.P_unitMain">
         </div>
       </div>
       <!--input:计价单位 end-->
@@ -103,12 +102,12 @@
           <div id="P_isUseHelpUnit">
             <div class="input-group-btn">
               <div class="radio-home">
-                <input type="radio" class="radio-switch" ng-model="formData.isUseHelpUnit" name="P_isUseHelpUnit" ng-value="true"><!--ng-model="productInfo.isUseHelpUnit" -->
-                <button class="input-group-btn btn-info form-control" type="button" value="true">启用</button>
+                <input type="radio" class="radio-switch" ng-model="item.P_isUseHelpUnit" name="P_isUseHelpUnit" ng-value="true"><!--ng-model="productInfo.isUseHelpUnit" -->
+                <button class="input-group-btn btn-info form-control" type="button" value=true ng-model="item.P_isUseHelpUnit">启用</button>
               </div>
               <div class="radio-home">
-                <input type="radio" class="radio-switch" ng-model="formData.isUseHelpUnit" name="P_isUseHelpUnit" ng-value="false">
-                <button class="input-group-btn btn-info form-control" type="button" value="false">禁用</button>
+                <input type="radio" class="radio-switch" ng-model="item.P_isUseHelpUnit" name="P_isUseHelpUnit" ng-value="false">
+                <button class="input-group-btn btn-info form-control" type="button" value=false ng-model="item.P_isUseHelpUnit">禁用</button>
               </div>
             </div>
           </div>
@@ -121,7 +120,7 @@
         <label for="P_quantityAtStart" class="sr-only">初始数量</label>
         <div class="input-group">
           <label for="P_quantityAtStart" class="input-group-addon input-title">初 始 数 量</label>
-          <input type="number" class="form-control" name="P_quantityAtStart" id="P_quantityAtStart">
+          <input type="number" class="form-control" name="P_quantityAtStart" id="P_quantityAtStart" ng-model="item.P_quantityAtStart">
         </div>
       </div>
       <!--input:初始数量 end-->
@@ -131,7 +130,7 @@
         <label for="P_costPrice" class="sr-only">成本单价</label>
         <div class="input-group">
           <label for="P_costPrice" class="input-group-addon input-title">成 本 单 价</label>
-          <input type="text" class="form-control" name="P_costPrice" id="P_costPrice">
+          <input type="text" class="form-control" name="P_costPrice" id="P_costPrice" ng-model="item.P_costPrice">
           <label for="P_costPrice" class="input-group-addon">元</label>
         </div>
       </div>
@@ -142,7 +141,7 @@
         <label for="P_sellingPrice" class="sr-only">销售单价</label>
         <div class="input-group">
           <label for="P_sellingPrice" class="input-group-addon input-title">销 售 单 价</label>
-          <input type="text" class="form-control" name="P_sellingPrice" id="P_sellingPrice">
+          <input type="text" class="form-control" name="P_sellingPrice" id="P_sellingPrice" ng-model="item.P_sellingPrice">
           <label for="P_sellingPrice" class="input-group-addon">元</label>
         </div>
       </div>
@@ -153,7 +152,7 @@
     <!--row[2] end-->
 
     <!--row[3] start-->
-    <div class="row">
+    <div class="row" ng-if="item.P_isUseHelpUnit">
       <div class="col-lg-1"></div>
 
       <!--input:辅助单位 start-->
@@ -161,18 +160,18 @@
         <label for="P_unitHelp" class="sr-only">辅助单位</label>
         <div class="input-group">
           <label for="P_unitHelp" class="input-group-addon input-title">辅 助 单 位</label>
-          <input type="text" class="form-control" name="P_unitHelp" id="P_unitHelp">
+          <input type="text" class="form-control" name="P_unitHelp" id="P_unitHelp" ng-model="item.P_unitHelp">
         </div>
       </div>
       <!--input:辅助单位 end-->
 
-      <!--input:单位比例 start-->
+      <!--input:主单位比 start-->
       <div class="form-group form-group-lg col-lg-2">
-        <label for="P_timesForMainUnit" class="sr-only">单位比例</label>
+        <label for="P_timesForMainUnit" class="sr-only">与主单位比例</label>
         <div class="input-group">
-          <label for="P_timesForMainUnit" class="input-group-addon input-title">1 主单位换</label>
-          <input type="number" class="form-control" name="P_timesForMainUnit" id="P_timesForMainUnit">
-          <label for="P_timesForMainUnit"class="input-group-addon">辅单位</label>
+          <label for="P_timesForMainUnit" class="input-group-addon input-title">主单位比例</label>
+          <input type="text" class="form-control" name="P_timesForMainUnit" id="P_timesForMainUnit" ng-model="item.P_timesForMainUnit">
+          <!--<label for="P_timesForMainUnit" class="input-group-addon">辅单位</label>-->
         </div>
       </div>
       <!--input:单位比例 end-->
@@ -182,7 +181,7 @@
         <label for="P_unitHelp_barCode" class="sr-only">辅单位条码</label>
         <div class="input-group">
           <label for="P_unitHelp_barCode" class="input-group-addon input-title">辅 单 位 条 码</label>
-          <input type="text" class="form-control" name="P_unitHelp_barCode" id="P_unitHelp_barCode">
+          <input type="text" class="form-control" name="P_unitHelp_barCode" id="P_unitHelp_barCode" ng-model="item.P_unitHelp_barCode">
         </div>
       </div>
       <!--input:辅单位条形码 end-->
@@ -192,7 +191,7 @@
         <label for="P_unitHelp_price" class="sr-only">辅单位售价</label>
         <div class="input-group">
           <label for="P_unitHelp_price" class="input-group-addon input-title">辅单位售价</label>
-          <input type="text" class="form-control" name="P_unitHelp_price" id="P_unitHelp_price">
+          <input type="text" class="form-control" name="P_unitHelp_price" id="P_unitHelp_price" ng-model="item.P_unitHelp_price">
           <label for="P_unitHelp_price" class="input-group-addon">元</label>
         </div>
       </div>
@@ -200,7 +199,11 @@
 
       <div class="col-lg-1"></div>
     </div>
-    <!--row[3] end-->
 
+    <!--row[3] end-->
+    <div class="row">
+      <button class="btn btn-primary" ng-disabled="productAdd.$invalid">添加</button>
+    </div>
   </form>
+  <h1>{{ result }}</h1>
 </div>

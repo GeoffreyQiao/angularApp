@@ -1,8 +1,6 @@
-/// <reference path="typings/node/node.d.ts"/>
 /**
  * Created by Geo on 2016/4/4.
  */
-
 
 //模块 modules-----------------------------------------------------------
 var express = require('express');
@@ -15,6 +13,7 @@ var methodOverride = require('method-override');
 var db = require('./configs/db');
 
 //设置发布端口 setting port-------------------------------------------------
+process.env.PORT = 80;
 var port = process.env.PORT || 80;
 
 //解析application/json数据 parse application/json data---------------------
@@ -37,8 +36,7 @@ app.use(methodOverride('X-HTTP-Method-Override'));
 app.use(express.static(__dirname + '/public'));
 
 app.use(function (req, res, next) {
-  console.log('Time: %d', Date.now());
-  console.log(req.path);
+  console.log(req.body);
   next();
 });
 

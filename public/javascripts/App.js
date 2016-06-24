@@ -88,6 +88,7 @@ app.service('productModel', function(data)
                      self.info[key] = value;
                    }
                  });
+
     /**
      *
      * @type {{P_name: string, P_barCode: string, P_brand: string, P_shortName: string, P_unitMain: string, P_spec: string, P_category: string, P_isUseHelpUnit: boolean, P_quantityAtStart: number, P_costPrice: number, P_sellingPrice: number, P_unitHelp: string, P_timesForMainUnit: number, P_unitHelp_barCode: string, P_unitHelp_price: number, P_isSelling: boolean, P_addDate: Date}}

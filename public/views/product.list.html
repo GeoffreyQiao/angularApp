@@ -4,7 +4,7 @@
          placeholder="请输入商品：条码、名称或简写首字母">
 </div>
 <div class="table-box table-responsive">
-  <table class="table list table-hover">
+  <table id="products-list" class="table list table-hover">
     <thead>
     <tr class="row">
       <th class="col-lg-1">编&nbsp;&nbsp;&nbsp;&nbsp;号</th>
@@ -19,11 +19,11 @@
     <tbody products-list>
     <tr class="row" ng-repeat="item in products | orderBy: 'P_brand': true">
       <td class="col-lg-1" ng-bind="getIndexNo($index, '# ')"></td>
-      <td class="col-lg-2" ng-bind="item.P_barcode"></td>
+      <td class="col-lg-2" ng-bind="item.P_barCode"></td>
       <td class="col-lg-3 item-name" ng-bind="item.P_name"></td>
       <td class="col-lg-2" ng-bind="item.P_brand"></td>
-      <td class="col-lg-1" ng-bind="item.P_mainUnit"></td>
-      <td class="col-lg-2" ng-bind="item.P_price | currency:'¥&emsp;':1"></td>
+      <td class="col-lg-1" ng-bind="item.P_unitMain"></td>
+      <td class="col-lg-2" ng-bind="item.P_sellingPrice | currency:'¥&emsp;':1"></td>
       <td class="col-lg-1">
         <button class="btn btn-danger" ng-click="deleteProductById(item._id)">
           <i class="fa fa-close fa-lg"></i>
@@ -31,10 +31,12 @@
         <button class="btn btn-primary" ng-click="editProductById(item._id)">
           <i class="fa fa-edit fa-lg"></i>
         </button>
-
       </td>
     </tr>
     </tbody>
-
   </table>
+  <div>
+    <h2 ng-bind="result"></h2>
+  </div>
+
 </div>

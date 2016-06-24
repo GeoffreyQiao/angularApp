@@ -1,11 +1,13 @@
 /**
  * Created by Geo on 2016/4/13.
  */
+
 var express = require('express');
 var router  = express.Router();
 var mongo   = require('../models/product');
 
 var db = mongo.db;
+var ProductModel = mongo.ProductModel;
 
 router.post('/add', function(req, res)
 {
@@ -33,7 +35,6 @@ router.get('/list', function(req, res)
 router.get('/del/:id', function(req, res)
 {
   var productId = req.params.id;
-  console.log(req.params);
   removeProduct(productId, function(info)
   {
     res.json(info);
@@ -61,8 +62,8 @@ module.exports = router;
  * @param callback (处理数据库操作返回结果)
  */
 var getProductsList = function(callback)
-  {
-    mongo.ProductModel.find({},
+{
+  ProductModel.find({},
     /**
      * (获取数据库中的商品信息)
      * 
@@ -70,15 +71,16 @@ var getProductsList = function(callback)
      * @param products (商品结果信息)
      * @param next (数据处理中间件)
      */
-    function(err, products, next)
+    function(err, products)
     {
       if(err)
       {
         console.log(err);
       }
+      console.log(products);
       callback && callback(products);
     })
-  };
+};
 
 /**
  * (新增商品)
@@ -89,7 +91,7 @@ var getProductsList = function(callback)
  */
 var addProduct = function(productData, callback)
 {
-  mongo.ProductModel.create(productData,
+  ProductModel.create(productData,
   
 /**
  * (接收数据库返回结果)
@@ -103,11 +105,8 @@ var addProduct = function(productData, callback)
     if(err) return console.log(err);
     if(product)
     {
-      callback(true);
-      return;
+      return callback(true);
     }
-    db.close();
-    return;
   });
 };
 
@@ -129,24 +128,20 @@ var removeProduct = function(productId, callback)
  */
   function(err)
   {
-    if(err) return console.log(err);
+    if(err){
+      callback('failed');
+      return console.log(err);
+    }
     callback('success');
-    db.close();
-    return;
-  })};
-
+//    db.close();
+  })
+};
 
 /**
  * (按照不同条件搜索商品)
  * 
- * @param {Object} productObj (商品搜索条件)
  * @param callback (处理操作结果)
- */
-/**
- * (description)
- * 
- * @param err (description)
- * @param products (description)
+ * @param productObj (商品搜索条件)
  * @returns (description)
  */
 var searchProduct = function(productObj, callback)

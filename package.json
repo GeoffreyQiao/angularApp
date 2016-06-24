@@ -4,8 +4,11 @@
   "description": "",
   "main": "server.js",
   "scripts": {
-    "start": "node --debug server.js",
-    "supervisor": "supervisor --debug server.js"
+    "start": "concurrent \"npm run tsc:w\" \"npm run lite\" ",
+    "supervisor": "supervisor --debug server.js",
+    "tsc": "tsc",
+    "tsc:w": "tsc -w",
+    "lite": "lite-server"
   },
   "author": "",
   "license": "ISC",
@@ -16,10 +19,11 @@
     "mongoose": "^4.4.11"
   },
   "dependencies": {
+    "angular2": "^2.0.0-beta.17",
     "body-parser": "^1.15.0",
     "cookie-parser": "^1.4.1",
     "eslint": "^2.8.0",
     "express": "^4.13.4",
-    "mongoose": "^4.4.12"
+    "mongoose": "^4.4.19"
   }
 }

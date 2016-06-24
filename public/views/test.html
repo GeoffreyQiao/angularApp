@@ -1,12 +1,39 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+  <meta charset="utf-8">
+  <script type="text/javascript">
+  function showResult()
+  {
+     x = document.forms["myform"]["newinput"].value;
+     document.forms["myform"]["result"].value=x+" 你好";
+  }
+  </script>
+</head>
+<body>
 <div class="container">
-  <!-- /.container --><h1>空</h1>
-  <div ui-view></div>
-  <form action="">
-    <div class="radio-switch-group">
-      <label for="radio-on">on</label>
-      <input class="input input-on switch-btn radio-switch" id="radio-on" type="radio" name="it" value="on" checked/>
-      <label for="radio-off">off</label>
-      <input class="input input-off switch-btn radio-switch" id="radio-off" type="radio" name="it" value="off"/>
-    </div>
-  </form>
-</div>
+<link rel="stylesheet" href="../styles/app.css">
+<!--   /.container<h1>空</h1>
+ --><!--   <div ui-view></div> -->
+  <div class="l-to-r"></div>
+<!--   <form action="">
+  <div class="radio-switch-group">
+    <label for="radio-on">on</label>
+    <input class="input input-on switch-btn radio-switch" id="radio-on" type="radio" name="it" value="on" checked/>
+    <label for="radio-off">off</label>
+    <input class="input input-off switch-btn radio-switch" id="radio-off" type="radio" name="it" value="off"/>
+  </div>
+</form>
+ --></div>
+
+
+<math xmlns="http://www.w3.org/1998/Math/MathML"> <mrow> <msup><mi>a</mi><mn>2</mn></msup> <mo>+</mo> <msup><mi>b</mi><mn>2</mn></msup> <mo>=</mo> <msup><mi>c</mi><mn>2</mn></msup> </mrow> </math>
+
+<form action="http://www.tutorialspoint.com/cgi-bin/html5.cgi" method="get" name="myform">
+  Enter a value : <input type="text" name="newinput" />
+  <input type="button" value="Result"  onclick="showResult();" />
+  <output name="result"/>
+</form>
+
+</body>
+</html>
