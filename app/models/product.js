@@ -38,8 +38,8 @@ var productsSchema = new mongoose.Schema({
   P_unitHelp_barCode : String,        //辅单位条码
   P_unitHelp_price   : Number,        //辅单位售价
   P_addDate          : {              //新增商品时间
-    type    : Date,
-    default : Date.now()
+    type    : String,
+    default : +new Date()
   }
 });
 

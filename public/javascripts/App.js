@@ -110,7 +110,7 @@ app.service('productModel', function(data)
       P_unitHelp_barCode : '',
       P_unitHelp_price   : 0.0,
       P_isSelling        : true,
-      P_addDate          : new Date()
+      P_addDate          : +new Date()
     };
 
     /**

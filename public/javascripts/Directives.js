@@ -3,6 +3,7 @@
  */
 
 app
+  /* 获取商品列表 */
   .directive('productsList', function()
   {
     return {
@@ -14,6 +15,7 @@ app
     }
   })
 
+  /* 切换特效按钮 */
   .directive('switchButton', function()
   {
     return {
@@ -26,6 +28,7 @@ app
     }
   })
 
+  /* 搜索栏 */
   .directive('searchBar', function()
   {
     return {

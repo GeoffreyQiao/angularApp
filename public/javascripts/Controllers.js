@@ -240,27 +240,6 @@ app.controller('AppCtrl', ['$scope',
                                         P_isUseHelpUnit : true
                                       };
 
-//                                    $scope.add = function()
-//                                    {
-//                                      $http({
-//                                              method : 'POST',
-//                                              url    : 'http://127.0.0.1/product/add',
-//                                              data   : $scope.item
-//                                            })
-//                                        .success(function(res)
-//                                                 {
-//                                                   if(res == 'success')
-//                                                   {
-//                                                     $scope.result = '商品添加成功';
-//                                                     $scope.item = {
-//                                                       P_isUseHelpUnit: true
-//                                                     };
-//                                                   }else if(res == 'failed'){
-//                                                     return $scope.result = '商品添加失败';
-//                                                   }
-//                                                 });
-//                                    }
-
                                       $scope.add = function()
                                         {
                                           var dataObj = {

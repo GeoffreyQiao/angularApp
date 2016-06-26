@@ -5,6 +5,12 @@
 app.factory('AjaxService', ["$q", "$http", function($q, $http)
   {
     return {
+
+      /**
+       * GET请求
+       * @param optionsObj
+       * @returns {promise|any|Promise<T>}
+       */
       get  : function(optionsObj)
         {
           var deferred = $q.defer();
@@ -30,6 +36,12 @@ app.factory('AjaxService', ["$q", "$http", function($q, $http)
                       });
           return promise;
         },
+
+      /**
+       * POST请求
+       * @param optionsObj
+       * @returns {promise|any|Promise<T>}
+       */
       post : function(optionsObj)
         {
           var deferred = $q.defer();
